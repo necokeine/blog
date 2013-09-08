@@ -1,73 +1,10 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>
-            {% if page.title %}
-                {{ page.title}}
-            {% else %}
-                {{ site.title}}
-            {% endif %}
-        </title>
-        <meta name="author" content="Maplebeats"/>
-        {% if page.summary %}
-            <meta name="description" content="{{ page.summary}}"/>
-        {% endif %}
-        <link rel="alternate" href="/atom.xml" title="maplebeats" />
-        <link rel="stylesheet" href="/stylesheets/main.css" />
-        <link rel="stylesheet" href="/stylesheets/syntax.css" />
-        <link rel="stylesheet" href="/stylesheets/darling.css" />
-        {% for css in page.stylesheet %}
-            <link rel="stylesheet" href="{{ css }}" />
-        {% endfor %}
-    </head>
-    <body>
-        <!--[if IE]>
-        <div class="iexplorer">
-            <p>警告！网页不兼容你的浏览器</p>
-        </div>
-        <![endif]-->
-        <header class="head">
-            <div class="header">
-                <section class="logo">
-                    <a href="/"><img src="/images/logo.png" alt="logo" /></a>
-                </section>
-                <hgroup class="head-title">
-                    <h1><a rel="nofollow" href="/">MapleBeats</a></h1>
-                    <h2>ACG才是我们唯一的归宿！ Σ(っ°д°)っ</h2>
-                </hgroup>
-                <nav class="nav">
-                <a href="/">Home</a> <a href="/photos">Photos</a> <a href="/me">Me</a> <a href="https://github.com/maplebeats">Res</a> <a href="/atom.xml">Rss</a>
-                </nav>
-            </div>
-        </header><!--header-->
-        <div class="head-line"></div>
-        <section class="site">
-            {{ content }}
-        </section>
-        <footer>
-            <div class="footer">
-                <section class="power">
-                <p>Theme by <a href="#">枫叶饭团</a></p>
-                    <p>Powered by <a rel="nofollow" href="https://github.com/mojombo/jekyll">Github</a></p>
-                </section>
-                <section class="link">
-                    <ul>
-                      <li><a rel="nofollow" href="http://forum.ubuntu.org.cn">ubuntu中文</a></li>
-                  </ul>
-                </section>
-                <section class="copyleft">
-                    <p>Talk is easy,
-                    <p>show me the code!
-                </section>
-                <section class="html5-logo"><img src="/images/html5.png" alt="html5" /></section>
-            </div>
-        </footer>
-        {% include darling.html %}
-        <script src="/javascripts/lib.js"></script>
-        <script src="/javascripts/darling.js"></script>
-        {% for js in page.javascript %}
-            <script src="{{ js }}"></script>
-        {% endfor %}
-    </body>
+<head>
+　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+　<title>{{ page.title }}</title>
+</head>
+<body>
+　{{ content }}
+</body>
 </html>
