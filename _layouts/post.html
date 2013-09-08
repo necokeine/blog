@@ -1,0 +1,26 @@
+---
+layout: blog
+javascript:
+    - /js/comment.js
+stylesheet:
+    - /css/comment.css
+    - /css/blog.css
+    - /css/font.css
+---
+<nav class="updown">
+    {% if page.next %}
+        <a id="prev" class="button" href="{{ page.next.url }}"><i class="icon-reply-1"></i></a>
+    {% endif %}
+    {% if page.previous %}
+        <a id="next" class="button" href="{{ page.previous.url }}"><i class="icon-forward-1"></i></a>
+    {% endif %}
+</nav>
+<div class="inc_author">{{ page.author }}</div>
+<h1>{{ page.title }}</h1>
+<div class="inc_time">Post on {{ page.date | date_to_string }}</div>
+<div class="diver"></div>
+<article>
+{{ page.summary }}
+{{ content }}
+</article>
+{% include comment.html %}

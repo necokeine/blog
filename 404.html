@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>404</title>
+        <style>
+            body{
+                text-align: center;
+            }
+            .wapper{
+                margin-left: auto;
+                margin-right: auto;
+                height: 100%;
+                width: 500px;
+            }
+            #word{
+                font-size: 5px;
+            }
+        </style>
+   </head>
+   <body>
+       <div class='wapper'>
+           <h1 id='word'>404</h1>
+       </div>
+       <script>
+           function randomColor() {  
+               var rand = "#"+Math.floor(Math.random()*Math.pow(2,24)).toString(16);  
+               if(rand.length == 7){  
+                   return rand;  
+               }else{  
+                   return randomColor();  
+               }
+           }
+           function up(e){
+               var size = e.style.fontSize;
+               size = parseInt(size.replace('px','')) + 1;
+               console.log(size);
+               e.style.fontSize = size.toString() + 'px';
+           }
+           var w = document.getElementById('word');
+           w.style.fontSize = '10px';
+           var count = 1;
+           var t = setInterval(function(){
+               if((count%23)==0){
+                   w.style.color = randomColor();
+               }
+               if(count === 200){
+                   clearInterval(t);
+                   window.location = '/';
+               }
+               up(w);
+               count++;
+           }, 10);
+       </script>
+   </body>
+</html>

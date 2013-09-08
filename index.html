@@ -1,11 +1,41 @@
----
-layout: default
-title: 我的Blog
----
-<h2>{{ page.title }}</h2>
-<p>最新文章</p>
-<ul>
-{% for post in site.posts %}
-<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-{% endfor %}
-</ul>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+           Welcome to maplebeats' index
+        </title>
+        <style>
+            body{
+                text-align: center;
+            }
+            footer{
+                font-size: 13px;
+                color: rgb(125, 129, 132);
+                font-family: fanwood;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            #time{
+                margin-top: 200px;
+                color: red;
+                font-size: 500%;
+            }
+        </style>
+	</head>
+    <body>
+        <div>
+            <a href="http://cn.linkedin.com/pub/maple-beats/64/137/478"><img src="http://www.linkedin.com/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View maple beats's profile on LinkedIn"></a>
+        </div>
+        <div id='time'>
+            5
+        </div>
+        <footer>
+            <a href='/blog'>BLOG</a>
+            <a href='http://share.maplebeats.com'>SHARE</a>
+            <a href='/photos'>PHOTOS</a>
+        </footer>
+        <script src="/js/index.js"></script>
+    </body>
+</html>

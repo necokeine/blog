@@ -1,0 +1,61 @@
+.button{
+    display: block;
+    position: fixed;
+    top: 30%;
+    width: 150px;
+    height: 60px;
+    border-radius: 200px;
+    box-shadow: 2px 2px 5px #333333; 
+    border: 5px solid #595959;
+    border-radius: 150px;
+}
+a:focus{
+    outline: none;
+}
+#prev{
+    left: -120px;
+    float: right;
+    transition: left 1s;
+}
+#prev:hover{
+    left: -90px;
+}
+#next{
+    right: -120px;
+    float: left;
+    transition: right 1s;
+}
+#next:hover{
+    right: -90px;
+}
+li,ul{
+    list-style: none;
+}
+.list-title{
+    margin: 5px 0 10px 0;
+}
+.list-title a{
+	height:10px;
+	width:80px;
+	font-size:15px;
+	border-radius:3px;
+	background:#5c5c5c;
+	color:white;
+	padding:5px 9px 5px 10px;
+	margin:10px 0 10px -36px;
+	border-bottom:#424242 1px solid;
+    text-decoration: none;
+}
+.list-title a:before{
+	width:4px;
+	height:4px;
+	content:url('../images/corner.png');
+	position:relative;
+	top:14px;
+	left:-8px;
+}
+h2{
+	font-size:20px;
+	font-weight:normal;
+	margin:3px 0;
+}
